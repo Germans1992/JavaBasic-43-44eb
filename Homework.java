@@ -3,21 +3,29 @@ package homework;
 public class Homework {
     public static void main(String[] args) {
 
-        //Уровень задания 1
+        //Do your homework of 2 choices. The first task is easy, the second is more difficult. We wish you good luck!
+        //First level: Феликс прожил 3011456_567 секунд. Сколько лет прожил Феликс? Посчитать, используя Java, Long-переменные и деление.
+        //Кто не знает - по какой формуле посчитать - напишите мне, но сначала подумайте
+        //Second level: Астерикс и Обеликс варили зелье.
+        //Зелье будет сварено правильно, если его будут варить больше 5 часов или если варить будет Астерикс.
+        //Дано: некоторое (любое) число, указывающее длительность варки, и boolean переменная, которая хранит true - если зелье варил Астерикс, и false - если Обеликс.
+        //На экране должно быть написано true - если зелье получилось, false -если не получилось
+        //Подсказка: последний урок, задача про "теплую одежду" - очень похоже решение
+        //Подсказка2: || используем и boolean переменные
 
-        int number = 179;
-        int newNumber = number + 1;
-        System.out.println("The next number for the number " + number + " is " + newNumber + ".");
-        newNumber = number - 1;
-        System.out.println("The previous number for the number " + number + " is " + newNumber + ".");
+        long felix = 3011456_567L; // прожил секунд
+        int year = 31_557_600; // секунд в году
+        long felixsLife = felix / 31_557_600; // узнаем сколько лет прожил феликс
+        System.out.println(felixsLife);
 
-        //Уровень задания 2
+// Задача два
+        boolean asterixBrewPowerDrink = true;
+        boolean obelixBrewPowerDrink = false;
+        int cookHours = 6;
+        boolean correctPowerDrink = (cookHours > 5 || asterixBrewPowerDrink);
+        System.out.println(correctPowerDrink);
 
-        int n = 3;
-        int k = 14;
-        int c = k % n;
-        System.out.println("Остаток в корзине " + c + ".");
-        int a = k / 10 % 10;
-        System.out.println("Количество десятков " + a + ".");
+
+
     }
 }
